@@ -1,4 +1,4 @@
-body{
+.body{
     background: linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
 }
 #sidebar-wrapper {
@@ -59,4 +59,43 @@ body{
 }
 .mt-9 {
     margin-top: 13rem;
+}
+@media  screen and (max-width : 991px) {
+    .navb-inp {
+        margin-top: 10px !important;
+    }
+}
+/* Cards Titles Costumizations */
+@media  screen and (max-width : 1181px) {
+  .price {
+    font-size: 0.9rem ;
+  }
+  .price1 {
+    font-size: 1.5rem !important ;
+  } 
+  .payments-c {
+    height: 185px;
+  }
+}
+/* Costum the billy notfication icon */
+@media  screen and (max-width : 884px){
+  .input-group {
+    width: 80% !important;
+  }
+  .not-but {
+    position: relative;
+    left: 270px;
+    bottom: 37px;
+  }
+
+}
+
+@media  screen and (max-width : 320px){
+ 
+  .not-but {
+    position: relative;
+    left: 228px;
+    bottom: 37px;
+  }
+
 }
