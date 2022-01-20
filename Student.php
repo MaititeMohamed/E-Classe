@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="page Student for see Students List and more informaition about student  ">
+    <meta name="keywords" content="Student Students List ">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -43,7 +45,7 @@
             </div>
 
             <div class="list-group list-group-flush my-4">
-                <a href="dashboard.html"
+                <a href="dashboard.php"
                     class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto  aside-bar-links ">
                     <i class="bi  bi-house "></i> Home</a>
                 <a href="#"
@@ -52,7 +54,7 @@
                 <a href="#"
                     class="list-group-item list-group-item-action active w-75 second-text m-auto  aside-bar-links ">
                     <i class="bi bi-mortarboard"></i> Students</a>
-                <a href="payment.html"
+                <a href="payment.php"
                     class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto  aside-bar-links ">
                     <i class="bi bi-wallet"></i> Payment</a>
                 <a href="#"
@@ -141,12 +143,12 @@
                             <th scope="row" >
                                 <img src="img/pu.jpg" alt="people" width="80">
                             </th>
-                            <td class="vl">username</td>
-                            <td class="vl">user@email.com</td>
-                            <td class="vl">7305477760</td>
-                            <td class="vl">1234567305477760 </td>
-                            <td class="vl">08-Dec, 2021</td>
-                         <td class="vl">
+                            <td >username</td>
+                            <td >user@email.com</td>
+                            <td >7305477760</td>
+                            <td >1234567305477760 </td>
+                            <td >08-Dec, 2021</td>
+                         <td >
                              
                                 <a href="#" ><i class="bi bi-pencil  text-info mx-3"></i></a>
                                 <a href="#" ><i class="bi bi-trash text-info "></i></a>
@@ -162,12 +164,12 @@
                             <th scope="row">
                                 <img src="img/pu.jpg" alt="people" width="80">      
                             </th>
-                            <td class="vl">username</td>
-                            <td class="vl">user@email.com</td>
-                            <td class="vl">7305477760</td>
-                            <td class="vl">1234567305477760 </td>
-                            <td class="vl">08-Dec, 2021</td>
-                            <td class="vl">
+                            <td class="align-middle">username</td>
+                            <td class="align-middle">user@email.com</td>
+                            <td class="align-middle">7305477760</td>
+                            <td class="align-middle">1234567305477760 </td>
+                            <td class="align-middle">08-Dec, 2021</td>
+                            <td class="align-middle">
                                 <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
                                 <a href="#"  ><i class="bi bi-trash text-info "></i></a>
                             </td>
@@ -179,12 +181,12 @@
                             <th scope="row">
                                 <img src="img/pu.jpg" alt="people" width="80">      
                             </th>
-                            <td class="vl">username</td>
-                            <td class="vl">user@email.com</td>
-                            <td class="vl">7305477760</td>
-                            <td class="vl">1234567305477760 </td>
-                            <td class="vl">08-Dec, 2021</td>
-                            <td class="vl">
+                            <td class="align-middle">username</td>
+                            <td class="align-middle">user@email.com</td>
+                            <td class="align-middle">7305477760</td>
+                            <td class="align-middle">1234567305477760 </td>
+                            <td class="align-middle">08-Dec, 2021</td>
+                            <td class="align-middle">
                                 <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
                                 <a href="#"  ><i class="bi bi-trash text-info "></i></a>
                             </td>
@@ -196,12 +198,12 @@
                             <th scope="row">
                                 <img src="img/pu.jpg" alt="people" width="80">      
                             </th>
-                            <td class="vl">username</td>
-                            <td class="vl">user@email.com</td>
-                            <td class="vl">7305477760</td>
-                            <td class="vl">1234567305477760 </td>
-                            <td class="vl">08-Dec, 2021</td>
-                            <td class="vl">
+                            <td class="align-middle">username</td>
+                            <td class="align-middle">user@email.com</td>
+                            <td class="align-middle">7305477760</td>
+                            <td class="align-middle">1234567305477760 </td>
+                            <td class="align-middle">08-Dec, 2021</td>
+                            <td class="align-middle">
                                 <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
                                 <a href="#"  ><i class="bi bi-trash text-info "></i></a>
                             </td>
@@ -213,12 +215,12 @@
                             <th scope="row">
                                 <img src="img/pu.jpg" alt="people" width="80">      
                             </th>
-                            <td class="vl">username</td>
-                            <td class="vl">user@email.com</td>
-                            <td class="vl">7305477760</td>
-                            <td class="vl">1234567305477760 </td>
-                            <td class="vl">08-Dec, 2021</td>
-                            <td class="vl">
+                            <td class="align-middle">username</td>
+                            <td class="align-middle">user@email.com</td>
+                            <td class="align-middle">7305477760</td>
+                            <td class="align-middle">1234567305477760 </td>
+                            <td class="align-middle">08-Dec, 2021</td>
+                            <td class="align-middle">
                                 <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
                                 <a href="#"  ><i class="bi bi-trash text-info "></i></a>
                             </td>
@@ -230,12 +232,12 @@
                             <th scope="row">
                                 <img src="img/pu.jpg" alt="people" width="80">      
                             </th>
-                            <td class="vl">username</td>
-                            <td class="vl">user@email.com</td>
-                            <td class="vl">7305477760</td>
-                            <td class="vl">1234567305477760 </td>
-                            <td class="vl">08-Dec, 2021</td>
-                            <td class="vl">
+                            <td class="align-middle">username</td>
+                            <td class="align-middle">user@email.com</td>
+                            <td class="align-middle">7305477760</td>
+                            <td class="align-middle">1234567305477760 </td>
+                            <td class="align-middle">08-Dec, 2021</td>
+                            <td class="align-middle">
                                 <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
                                 <a href="#"  ><i class="bi bi-trash text-info "></i></a>
                             </td>
@@ -247,12 +249,12 @@
                             <th scope="row">
                                 <img src="img/pu.jpg" alt="people" width="80">      
                             </th>
-                            <td class="vl">username</td>
-                            <td class="vl">user@email.com</td>
-                            <td class="vl">7305477760</td>
-                            <td class="vl">1234567305477760 </td>
-                            <td class="vl">08-Dec, 2021</td>
-                            <td class="vl">
+                            <td class="align-middle">username</td>
+                            <td class="align-middle">user@email.com</td>
+                            <td class="align-middle">7305477760</td>
+                            <td class="align-middle">1234567305477760 </td>
+                            <td class="align-middle">08-Dec, 2021</td>
+                            <td class="align-middle">
                                 <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
                                 <a href="#"  ><i class="bi bi-trash text-info "></i></a>
                             </td>

@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="page dashboard for see number of Users and Students course  ">
+    <meta name="keywords" content="dashboard E-classe learn course">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
+    
     <title>dashboard</title>
 </head>
 
@@ -29,13 +31,13 @@
             <div class="list-group list-group-flush my-4">
                 <a href="#" class="list-group-item list-group-item-action active w-75 second-text m-auto  aside-bar-links ">
                     <i class="bi  bi-house "></i> Home</a>
-                <a href="#"
+                <a href="dashboard.php"
                     class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto  aside-bar-links ">
                     <i class="bi bi-bookmark"></i> Course</a>
-                <a href="Student.html"
+                <a href="Student.php"
                     class="list-group-item list-group-item-action  bg-transparent w-75 second-text m-auto  aside-bar-links ">
                     <i class="bi bi-mortarboard"></i> Students</a>
-                <a href="payment.html"
+                <a href="payment.php"
                     class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto  aside-bar-links ">
                     <i class="bi bi-wallet"></i> Payment</a>
                 <a href="#"
