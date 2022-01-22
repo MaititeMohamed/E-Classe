@@ -1,3 +1,42 @@
+<?php
+
+$studentPayment =array(
+
+ array(
+ 'Name'             =>'Karthi',
+'Payment Schedule'  =>'First',
+  'Bill Number'     =>'00012223',
+  'Amount Paid'     =>'DHS 100,000',
+ 'Balance amount'    =>'DHS 500,000',
+ 'Date'              =>'05-Jan,2022',
+ ),
+ array(
+  'Name'             =>'mohamed',
+ 'Payment Schedule'  =>'First',
+   'Bill Number'     =>'00012223',
+   'Amount Paid'     =>'DHS 100,000',
+  'Balance amount'    =>'DHS 500,000',
+  'Date'              =>'05-Jan,2022',
+  ),
+  array(
+    'Name'             =>'ali',
+   'Payment Schedule'  =>'First',
+     'Bill Number'     =>'00012223',
+     'Amount Paid'     =>'DHS 100,000',
+    'Balance amount'    =>'DHS 500,000',
+    'Date'              =>'05-Jan,2022',
+    ),
+    array(
+      'Name'             =>'ahmed',
+     'Payment Schedule'  =>'First',
+       'Bill Number'     =>'00012223',
+       'Amount Paid'     =>'DHS 100,000',
+      'Balance amount'    =>'DHS 500,000',
+      'Date'              =>'05-Jan,2022',
+      )
+    );
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,13 +75,8 @@
                </div>
             <div class=" table-responsive">
            <table class="table  table-striped overflow-scroll">
-               <thead style="display: none;">
-                 <tr >
-                   <td scope="col">#</td>
-                   <th scope="col">First</th>
-                   <th scope="col">Last</th>
-                   <th scope="col">Handle</th>
-                 </tr>
+               <thead >
+                
                </thead>
                <tbody class="border-top-0">
                    <tr>
@@ -51,44 +85,24 @@
                    <td  class="text-secondary p-3">Bill Number</td>
                    <td  class="text-secondary p-3">Amount Paid</td>
                    <td  class="text-secondary p-3">Balance amount</td>
-                   <td  class="text-secondary p-3" colspan="2">Date</td>  
+                   <td  class="text-secondary p-3" colspan="2">Date</td> 
+                 
                  </tr>
+                 <?php foreach($studentPayment as $pay) :?>
                  <tr>
-                     <td class="text-black p-3">Karthi</td>
-                     <td class="text-black p-3">First</td>
-                     <td class="text-black p-3">00012223</td>
-                     <td class="text-black p-3">DHS 100,000</td>
-                     <td class="text-black p-3">DHS 500,000</td>
-                     <td class="text-black p-3">05-Jan,2022</td>
+                     <td class="text-black p-3"><?php echo $pay['Name']; ?></td>
+                     <td class="text-black p-3"><?php echo $pay['Payment Schedule']; ?></td>
+                     <td class="text-black p-3"><?php echo $pay['Bill Number']; ?></td>
+                     <td class="text-black p-3"><?php echo $pay['Amount Paid'];?></td>
+                     <td class="text-black p-3"><?php echo $pay['Balance amount']; ?></td>
+                     <td class="text-black p-3"><?php echo $pay['Date'];?></td>
                      <td class="p-3"><i class="bi bi-eye text-info"></i></td>
                  </tr>
-                 <tr>
-                   <td class="text-black p-3">Karthi</td>
-                   <td class="text-black p-3">First</td>
-                   <td class="text-black p-3">00012223</td>
-                   <td class="text-black p-3">DHS 100,000</td>
-                   <td class="text-black p-3">DHS 500,000</td>
-                   <td class="text-black p-3">05-Jan,2022</td>
-                   <td class="p-3"><i class="bi bi-eye text-info"></i></td>
-               </tr>
-               <tr>
-                   <td class="text-black p-3">Karthi</td>
-                     <td class="text-black p-3">First</td>
-                     <td class="text-black p-3">00012223</td>
-                     <td class="text-black p-3">DHS 100,000</td>
-                     <td class="text-black p-3">DHS 500,000</td>
-                     <td class="text-black p-3">05-Jan,2022</td>
-                     <td class="p-3"><i class="bi bi-eye text-info"></i></td>
-               </tr>
-               <tr>
-                   <td class="text-black p-3">Karthi</td>
-                   <td class="text-black p-3">First</td>
-                   <td class="text-black p-3">00012223</td>
-                   <td class="text-black p-3">DHS 100,000</td>
-                   <td class="text-black p-3">DHS 500,000</td>
-                   <td class="text-black p-3">05-Jan,2022</td>
-                   <td class="p-3"><i class="bi bi-eye text-info"></i></td>
-               </tr>
+                
+               <?php endforeach ;?>
+                
+              
+             
                </tbody>
              </table>
             </div>
