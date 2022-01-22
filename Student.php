@@ -1,3 +1,64 @@
+
+<?php
+$Student=array(
+    array(
+        
+   'Name'=>"MohamedMaitite",
+   'Email'=>"MohamedMaitite@email.com",
+   	'phone'=>"0634252672",
+    'Enrol Number'=>"1234567305477760",
+	'Date of admission'=>"08-Dec, 2021",
+    ),
+    array(
+        'Name'=>"Ahmed",
+        'Email'=>"Ahmed@email.com",
+            'phone'=>"0634252672",
+         'Enrol Number'=>"1234567305477760",
+         'Date of admission'=>"08-Dec, 2021",
+    ),
+    array(
+        
+        'Name'=>"yousef",
+        'Email'=>"yousef@email.com",
+            'phone'=>"0634252672",
+         'Enrol Number'=>"1234567305477760",
+         'Date of admission'=>"08-Dec, 2021",
+         ),
+         array(
+             'Name'=>"yassen",
+             'Email'=>"yassen@email.com",
+                 'phone'=>"0634252672",
+              'Enrol Number'=>"1234567305477760",
+              'Date of admission'=>"08-Dec, 2021",
+         ),
+         array(
+        
+            'Name'=>"ryad",
+            'Email'=>"ryad@email.com",
+                'phone'=>"0634252672",
+             'Enrol Number'=>"1234567305477760",
+             'Date of admission'=>"08-Dec, 2021",
+             ),
+             array(
+                 'Name'=>"abdullah",
+                 'Email'=>"abdullah@email.com",
+                     'phone'=>"0634252672",
+                  'Enrol Number'=>"1234567305477760",
+                  'Date of admission'=>"08-Dec, 2021",
+             ),
+             array(
+        
+                'Name'=>"MohamedAli",
+                'Email'=>"Ali@email.com",
+                    'phone'=>"0634252672",
+                 'Enrol Number'=>"1234567305477760",
+                 'Date of admission'=>"08-Dec, 2021",
+                 ),
+            
+        );
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,9 +94,9 @@
 
     <div class="d-flex" id="wrapper">
         <!--     start  Sidebar       -->
-        <?php
-      include 'Sidebar.php'
-     ?>
+                <?php
+            include 'Sidebar.php'
+            ?>
         <!--     end  Sidebar       -->
 
        <!-- start  Content -->
@@ -73,126 +134,25 @@
                     </thead>
                     <tbody class="border-top-0 ">
                      
-                        <tr class=" bg-white " >
-                            <th scope="row" >
-                                <img src="img/pu.jpg" alt="people" width="80">
-                            </th>
-                            <td >username</td>
-                            <td >user@email.com</td>
-                            <td >7305477760</td>
-                            <td >1234567305477760 </td>
-                            <td >08-Dec, 2021</td>
-                         <td >
-                             
-                                <a href="#" ><i class="bi bi-pencil  text-info mx-3"></i></a>
-                                <a href="#" ><i class="bi bi-trash text-info "></i></a>
-                          
-                            </td>
-                            
-                        </tr>
-                        <tr id="spacing-row">
-                            <td></td>
-                        </tr>
-                      
-                        <tr class=" bg-white">
-                            <th scope="row">
-                                <img src="img/pu.jpg" alt="people" width="80">      
-                            </th>
-                            <td class="align-middle">username</td>
-                            <td class="align-middle">user@email.com</td>
-                            <td class="align-middle">7305477760</td>
-                            <td class="align-middle">1234567305477760 </td>
-                            <td class="align-middle">08-Dec, 2021</td>
-                            <td class="align-middle">
-                                <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
-                                <a href="#"  ><i class="bi bi-trash text-info "></i></a>
-                            </td>
-                        </tr>
-                        <tr id="spacing-row">
-                            <td></td>
-                        </tr>
-                        <tr class=" bg-white">
-                            <th scope="row">
-                                <img src="img/pu.jpg" alt="people" width="80">      
-                            </th>
-                            <td class="align-middle">username</td>
-                            <td class="align-middle">user@email.com</td>
-                            <td class="align-middle">7305477760</td>
-                            <td class="align-middle">1234567305477760 </td>
-                            <td class="align-middle">08-Dec, 2021</td>
-                            <td class="align-middle">
-                                <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
-                                <a href="#"  ><i class="bi bi-trash text-info "></i></a>
-                            </td>
-                        </tr>
-                          <tr id="spacing-row">
-                            <td></td>
-                        </tr>
-                        <tr class=" bg-white">
-                            <th scope="row">
-                                <img src="img/pu.jpg" alt="people" width="80">      
-                            </th>
-                            <td class="align-middle">username</td>
-                            <td class="align-middle">user@email.com</td>
-                            <td class="align-middle">7305477760</td>
-                            <td class="align-middle">1234567305477760 </td>
-                            <td class="align-middle">08-Dec, 2021</td>
-                            <td class="align-middle">
-                                <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
-                                <a href="#"  ><i class="bi bi-trash text-info "></i></a>
-                            </td>
-                            <tr id="spacing-row">
+                     
+                          <?php foreach($Student as $v) :?>
+                                <tr  class=" bg-white ">
+                                    <th scope="row" > <img src="img/pu.jpg" alt="people" width="80">  </th>
+                                    <td class="align-middle"><?php echo $v['Name'];?></td>
+                                    <td class="align-middle"><?php echo $v['Email'];?></td>
+                                    <td class="align-middle"><?php echo $v['phone'];?></td>
+                                    <td class="align-middle"><?php echo $v['Enrol Number'];?></td>
+                                    <td class="align-middle"><?php echo $v['Date of admission'];?></td>
+                                    <td class="align-middle" >  <a href="#" ><i class="bi bi-pencil  text-info mx-3"></i></a> <a href="#" ><i class="bi bi-trash text-info "></i></a></td>
+
+                                </tr>
+                                <tr id="spacing-row">
                                 <td></td>
-                            </tr>
-                        </tr>
-                        <tr class=" bg-white">
-                            <th scope="row">
-                                <img src="img/pu.jpg" alt="people" width="80">      
-                            </th>
-                            <td class="align-middle">username</td>
-                            <td class="align-middle">user@email.com</td>
-                            <td class="align-middle">7305477760</td>
-                            <td class="align-middle">1234567305477760 </td>
-                            <td class="align-middle">08-Dec, 2021</td>
-                            <td class="align-middle">
-                                <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
-                                <a href="#"  ><i class="bi bi-trash text-info "></i></a>
-                            </td>
-                        </tr>
-                        <tr id="spacing-row">
-                            <td></td>
-                        </tr>
-                        <tr class=" bg-white">
-                            <th scope="row">
-                                <img src="img/pu.jpg" alt="people" width="80">      
-                            </th>
-                            <td class="align-middle">username</td>
-                            <td class="align-middle">user@email.com</td>
-                            <td class="align-middle">7305477760</td>
-                            <td class="align-middle">1234567305477760 </td>
-                            <td class="align-middle">08-Dec, 2021</td>
-                            <td class="align-middle">
-                                <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
-                                <a href="#"  ><i class="bi bi-trash text-info "></i></a>
-                            </td>
-                        </tr>
-                        <tr id="spacing-row">
-                            <td></td>
-                        </tr>
-                        <tr class=" bg-white">
-                            <th scope="row">
-                                <img src="img/pu.jpg" alt="people" width="80">      
-                            </th>
-                            <td class="align-middle">username</td>
-                            <td class="align-middle">user@email.com</td>
-                            <td class="align-middle">7305477760</td>
-                            <td class="align-middle">1234567305477760 </td>
-                            <td class="align-middle">08-Dec, 2021</td>
-                            <td class="align-middle">
-                                <a href="#"  ><i class="bi bi-pencil  text-info mx-3 vl"></i></a>
-                                <a href="#"  ><i class="bi bi-trash text-info "></i></a>
-                            </td>
-                        </tr>
+                                </tr>
+                            <?php endforeach ; ?>
+                     
+                   
+                      
                     </tbody>
                 </table>
 
