@@ -2,7 +2,7 @@
 
 echo
 '
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-4 px-4">
 <div class="d-flex align-items-center">
     <i class="bi bi-list primary-text fs-2 me-3" id="menu-toggle"></i>
 
