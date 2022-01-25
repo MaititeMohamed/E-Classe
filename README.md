@@ -1,2 +1,2 @@
 # E-Classe
-hosting : e-classe2022.42web.io
+hosting :https://e-claaseapp.herokuapp.com/
