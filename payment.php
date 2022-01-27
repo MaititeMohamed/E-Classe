@@ -33,7 +33,23 @@ $studentPayment =array(
        'Amount Paid'     =>'DHS 100,000',
       'Balance amount'    =>'DHS 500,000',
       'Date'              =>'05-Jan,2022',
-      )
+    ),
+    array(
+      'Name'             =>'ahmed',
+     'Payment Schedule'  =>'First',
+       'Bill Number'     =>'00012223',
+       'Amount Paid'     =>'DHS 100,000',
+      'Balance amount'    =>'DHS 500,000',
+      'Date'              =>'05-Jan,2022',
+    ),
+      array(
+        'Name'             =>'ahmed',
+       'Payment Schedule'  =>'First',
+         'Bill Number'     =>'00012223',
+         'Amount Paid'     =>'DHS 100,000',
+        'Balance amount'    =>'DHS 500,000',
+        'Date'              =>'05-Jan,2022',
+        )
     );
 ?>
 
@@ -53,28 +69,26 @@ $studentPayment =array(
 </head>
 
 <body>
-
     <div class="d-flex" id="wrapper">
         <!--     start  Sidebar       -->
         <?php
        include 'Sidebar.php'
        ?>
         <!--     end  Sidebar       -->
-
-
         <!-- start  Content -->
         <div id="page-content-wrapper" style="background: #ffffff;">
                <?php
                  include 'Header.php'
               ?>
      
-            <div class="container-fluid">
+                 <div class="container-fluid">
                 <div class="d-flex justify-content-between py-3  border-bottom border-5">
                 <h2 class="fw-bold">Payment Details</h2>
                 <i class="bi bi-chevron-expand fs-3 text-info"></i>
                </div>
-            <div class=" table-responsive">
-           <table class="table  table-striped overflow-scroll">
+               <div class="container">
+               <div class="table-responsive Tr " style="max-height:400px; ">
+             <table class="table  table-striped ">
                <thead >
                 
                </thead>
@@ -106,7 +120,8 @@ $studentPayment =array(
                </tbody>
              </table>
             </div>
-                </div>
+              </div>
+                 </div>
         <!-- end  Content -->
 
 

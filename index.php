@@ -24,19 +24,19 @@
                 <form action="">
                     <div class="form-group">
                         <label for="usrEmail">Email</label>
-                        <input type="email" class="form-control" id="usrEmail" name="Email" required
+                        <input type="email" class="form-control" id="usrEmail" name="Email" 
                             placeholder="Enter you Email ">
                     </div>
                     <div class="form-group mt-3">
                         <label for="Password">Password</label>
-                        <input type="password" class="form-control" id="userPassword" name="password" required
+                        <input type="password" class="form-control" id="userPassword" name="password" 
                             placeholder="Enter you password ">
                     </div>
                     <div class="form-check mt-3">
                         <input type="checkbox" class="form-check-input" id="Remember"  >
                         <label >Remember me</label>
                     </div>
-                    <button type="submit" class="btn btn-info container-fluid mt-2  text-uppercase">Sign In</button>
+                    <button type="submit" class="btn btn-info container-fluid mt-2  text-uppercase"><a class="text-decoration-none" href="dashboard.php">Sign In</a></button>
                      <div class="d-flex justify-content-center mt-3">
                     <p class="text-secondary">Forgot your password?<span > <a href="#">Reset Password</a> </span> </p>
                     </div>
