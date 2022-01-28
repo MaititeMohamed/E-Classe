@@ -1,61 +1,4 @@
 
-<?php
-$Student=array(
-    array(  
-   'Name'=>"MohamedMaitite",
-   'Email'=>"MohamedMaitite@email.com",
-   	'phone'=>"0634252672",
-    'Enrol Number'=>"1234567305477760",
-	'Date of admission'=>"08-Dec, 2021",
-    ),
-    array(
-        'Name'=>"Ahmed",
-        'Email'=>"Ahmed@email.com",
-            'phone'=>"0634252672",
-         'Enrol Number'=>"1234567305477760",
-         'Date of admission'=>"08-Dec, 2021",
-    ),
-    array(
-        
-        'Name'=>"youssef",
-        'Email'=>"youssef@email.com",
-            'phone'=>"0634252672",
-         'Enrol Number'=>"1234567305477760",
-         'Date of admission'=>"08-Dec, 2021",
-         ),
-         array(
-             'Name'=>"yassen",
-             'Email'=>"yassen@email.com",
-                 'phone'=>"0634252672",
-              'Enrol Number'=>"1234567305477760",
-              'Date of admission'=>"08-Dec, 2021",
-         ),
-         array(
-        
-            'Name'=>"ryad",
-            'Email'=>"ryad@email.com",
-                'phone'=>"0634252672",
-             'Enrol Number'=>"1234567305477760",
-             'Date of admission'=>"08-Dec, 2021",
-             ),
-             array(
-                 'Name'=>"abdullah",
-                 'Email'=>"abdullah@email.com",
-                     'phone'=>"0634252672",
-                  'Enrol Number'=>"1234567305477760",
-                  'Date of admission'=>"08-Dec, 2021",
-             ),
-             array(
-        
-                'Name'=>"MohamedAli",
-                'Email'=>"Ali@email.com",
-                    'phone'=>"0634252672",
-                 'Enrol Number'=>"1234567305477760",
-                 'Date of admission'=>"08-Dec, 2021",
-                 ), 
-        );
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -98,7 +41,7 @@ $Student=array(
             <!-- end nav -->
             <!-- start table -->
 
-            <div class="container-fluid containerr">
+            <div class="container-fluid ">
                 <div class="d-flex justify-content-between  pt-2 border-4 border-bottom ">
                     <h2>Students List</h2>
                     <div  class="d-flex pb-3">
@@ -122,14 +65,17 @@ $Student=array(
                         </tr>
                     </thead>
                     <tbody class="border-top-0 ">
-                          <?php foreach($Student as $v) :?>
-                                <tr  class=" bg-white ">
-                                    <td > <img src="img/pu.jpg" alt="people" width="80">  </td>
+                    <?php  $get = file_get_contents("Studentinfo.json");
+                              $json=json_decode($get,true);
+                                        ?>
+                                        <?php  foreach($json as $v) :?>
+                                    <tr  class=" bg-white ">
+                                    <th scope="row" > <img src="img/pu.jpg" alt="people" width="80">  </th>
                                     <td class="align-middle"><?php echo $v['Name'];?></td>
                                     <td class="align-middle"><?php echo $v['Email'];?></td>
-                                    <td class="align-middle"><?php echo $v['phone'];?></td>
-                                    <td class="align-middle"><?php echo $v['Enrol Number'];?></td>
-                                    <td class="align-middle"><?php echo $v['Date of admission'];?></td>
+                                    <td class="align-middle"><?php echo $v['Phone'];?></td>
+                                    <td class="align-middle"><?php echo $v['EnrollNumber'];?></td>
+                                    <td class="align-middle"><?php echo $v['Date_addmission'];?></td>
                                     <td class="align-middle" > 
                                         <a href="#" ><i class="bi bi-pencil  text-info mx-3"></i></a> </td>
                                     <td class="align-middle" >  <a href="#" ><i class="bi bi-trash text-info "></i></a></td>

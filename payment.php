@@ -1,57 +1,3 @@
-<?php
-
-$studentPayment =array(
-
- array(
- 'Name'             =>'Karthi',
-'Payment Schedule'  =>'First',
-  'Bill Number'     =>'00012223',
-  'Amount Paid'     =>'DHS 100,000',
- 'Balance amount'    =>'DHS 500,000',
- 'Date'              =>'05-Jan,2022',
- ),
- array(
-  'Name'             =>'mohamed',
- 'Payment Schedule'  =>'First',
-   'Bill Number'     =>'00012223',
-   'Amount Paid'     =>'DHS 100,000',
-  'Balance amount'    =>'DHS 500,000',
-  'Date'              =>'05-Jan,2022',
-  ),
-  array(
-    'Name'             =>'ali',
-   'Payment Schedule'  =>'First',
-     'Bill Number'     =>'00012223',
-     'Amount Paid'     =>'DHS 100,000',
-    'Balance amount'    =>'DHS 500,000',
-    'Date'              =>'05-Jan,2022',
-    ),
-    array(
-      'Name'             =>'ahmed',
-     'Payment Schedule'  =>'First',
-       'Bill Number'     =>'00012223',
-       'Amount Paid'     =>'DHS 100,000',
-      'Balance amount'    =>'DHS 500,000',
-      'Date'              =>'05-Jan,2022',
-    ),
-    array(
-      'Name'             =>'ahmed',
-     'Payment Schedule'  =>'First',
-       'Bill Number'     =>'00012223',
-       'Amount Paid'     =>'DHS 100,000',
-      'Balance amount'    =>'DHS 500,000',
-      'Date'              =>'05-Jan,2022',
-    ),
-      array(
-        'Name'             =>'ahmed',
-       'Payment Schedule'  =>'First',
-         'Bill Number'     =>'00012223',
-         'Amount Paid'     =>'DHS 100,000',
-        'Balance amount'    =>'DHS 500,000',
-        'Date'              =>'05-Jan,2022',
-        )
-    );
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -102,7 +48,11 @@ $studentPayment =array(
                    <td  class="text-secondary p-3" colspan="2">Date</td> 
                  
                  </tr>
-                 <?php foreach($studentPayment as $pay) :?>
+                 <?php
+                  $get = file_get_contents("paymentinfo.json");
+                  $json=json_decode($get,true);
+                ?>
+                 <?php  foreach($json as $pay) :?>
                  <tr>
                      <td class="text-black p-3"><?php echo $pay['Name']; ?></td>
                      <td class="text-black p-3"><?php echo $pay['Payment Schedule']; ?></td>
