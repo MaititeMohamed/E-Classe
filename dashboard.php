@@ -40,7 +40,6 @@
                                     <h3 class="fs-2 fw-5 ">720</h3>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -58,7 +57,7 @@
                     </div>
 
                     <div class="col-md-6 col-lg-3">
-                        <div class=" p-3 shadow-sm rounded payments-c" style="background-color: #FEFBEC;">
+                        <div class=" p-3 shadow-sm rounded " style="background-color: #FEFBEC;">
                             <div>
                                 <i class="bi bi-wallet fs-1  p-3 text-info "></i>
                                 <p class="fs-5 mt-2 text-secondary">Payments</p>
