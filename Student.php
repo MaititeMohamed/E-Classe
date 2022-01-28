@@ -98,7 +98,7 @@ $Student=array(
             <!-- end nav -->
             <!-- start table -->
 
-            <div class="container-fluid ">
+            <div class="container-fluid containerr">
                 <div class="d-flex justify-content-between  pt-2 border-4 border-bottom ">
                     <h2>Students List</h2>
                     <div  class="d-flex pb-3">
@@ -113,7 +113,7 @@ $Student=array(
                     <thead>
                         <tr class="text-secondary" >
                             <th scope="col"></th>
-                            <th scope="col" >Name</th>
+                            <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">phone</th>
                             <th scope="col">Enrol Number</th>
@@ -124,7 +124,7 @@ $Student=array(
                     <tbody class="border-top-0 ">
                           <?php foreach($Student as $v) :?>
                                 <tr  class=" bg-white ">
-                                    <th scope="row" > <img src="img/pu.jpg" alt="people" width="80">  </th>
+                                    <td > <img src="img/pu.jpg" alt="people" width="80">  </td>
                                     <td class="align-middle"><?php echo $v['Name'];?></td>
                                     <td class="align-middle"><?php echo $v['Email'];?></td>
                                     <td class="align-middle"><?php echo $v['phone'];?></td>
@@ -151,16 +151,10 @@ $Student=array(
 
 
         </div>
-        <script>
-            var el = document.getElementById("wrapper");
-            var toggleButton = document.getElementById("menu-toggle");
-
-            toggleButton.onclick = function () {
-                el.classList.toggle("toggled");
-            };
-        </script>
+       
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script src="js/script.js"></script>
 </body>
 
 </html>

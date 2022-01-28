@@ -21,14 +21,14 @@
                 <h6 class="d-flex justify-content-center text-uppercase ">Sign In</h6>
                 <P class="d-flex justify-content-center mt-2 text-secondary">Enter your credentials to access your account </P>
 
-                <form action="">
+                <form action="post">
                     <div class="form-group">
-                        <label for="usrEmail">Email</label>
+                        <label >Email</label>
                         <input type="email" class="form-control" id="usrEmail" name="Email" 
                             placeholder="Enter you Email ">
                     </div>
                     <div class="form-group mt-3">
-                        <label for="Password">Password</label>
+                        <label >Password</label>
                         <input type="password" class="form-control" id="userPassword" name="password" 
                             placeholder="Enter you password ">
                     </div>
@@ -36,7 +36,7 @@
                         <input type="checkbox" class="form-check-input" id="Remember"  >
                         <label >Remember me</label>
                     </div>
-                    <button type="submit" class="btn btn-info container-fluid mt-2  text-uppercase"><a class="text-decoration-none" href="dashboard.php">Sign In</a></button>
+                    <a class="text-decoration-none btn btn-info container-fluid mt-2  text-uppercase" href="dashboard.php">Sign In</a>
                      <div class="d-flex justify-content-center mt-3">
                     <p class="text-secondary">Forgot your password?<span > <a href="#">Reset Password</a> </span> </p>
                     </div>

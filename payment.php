@@ -94,7 +94,7 @@ $studentPayment =array(
                </thead>
                <tbody class="border-top-0">
                    <tr>
-                   <td scope="row" class="text-secondary p-3">Name</td>
+                   <td class="text-secondary p-3">Name</td>
                    <td  class="text-secondary p-3">Payment Schedule</td>
                    <td  class="text-secondary p-3">Bill Number</td>
                    <td  class="text-secondary p-3">Amount Paid</td>
@@ -132,16 +132,10 @@ $studentPayment =array(
 
 
     </div>
-    <script>
-        var el = document.getElementById("wrapper");
-        var toggleButton = document.getElementById("menu-toggle");
-
-        toggleButton.onclick = function () {
-            el.classList.toggle("toggled");
-        };
-    </script>
+    
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
