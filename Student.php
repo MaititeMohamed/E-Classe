@@ -160,9 +160,10 @@ if(isset($_POST['save']))
                                         <td class="align-middle">'.$EnrolNumber.'</td>
                                         <td class="align-middle">'.$DateOfAdmission.'</td>
                                         <td class="align-middle">
-                                            <a href="Delete.php?updateid='.$id.'"><i class="bi bi-pencil  text-info mx-3"></i></a>
+                                            <a href="update.php?updateid='.$id.'">
+                                            <i class="bi bi-pencil  text-info mx-3"></i></a>
                                         </td>
-                                        <td class="align-middle"> <a href="update.php?deleteid='.$id.'"><i class="bi bi-trash text-info "></i></a></td>
+                                        <td class="align-middle"> <a href="delete.php?deleteid='.$id.'"><i class="bi bi-trash text-info "></i></a></td>
                                         </tr>
                                     <tr id="spacing-row">
                                         <td></td>
