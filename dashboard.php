@@ -1,3 +1,11 @@
+<?php
+include 'connectDB.php';
+$sql="SELECT COUNT(id) AS NumberOfstudent FROM students;";
+$res=mysqli_query($con,$sql);
+$row = mysqli_fetch_assoc($res)
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +45,12 @@
                                 <i class="bi bi-mortarboard fs-1 text-info"></i>
                                 <p class="fs-5 mt-2 text-secondary">Students</p>
                                 <div class="d-flex justify-content-end">
-                                    <h3 class="fs-2 fw-5 ">720</h3>
+                                    <h3 class="fs-2 fw-5 "><?php 
+                                   
+                                    foreach($row as $num){
+                                        echo $num;
+                                    }
+                                     ?></h3>
                                 </div>
                             </div>
                         </div>
