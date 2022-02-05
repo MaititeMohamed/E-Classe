@@ -6,7 +6,7 @@ if(isset($_POST['save']))
     $Email=$_POST['Email'];
     $phone=$_POST['phone'];
     $EnrolNumber=$_POST['EnrolN'];
-    $sql="INSERT INTO `students`( `Name`, `Email`, `phone`, `Enrol Number`)
+    $sql="INSERT INTO `students`( `Name`, `Email`, `phone`, `EnrolNumber`)
     VALUES ('$Name','$Email','$phone','$EnrolNumber')";
     $res=mysqli_query($con,$sql);
     if($res)
@@ -140,26 +140,39 @@ if(isset($_POST['save']))
                                 <?php 
                                 $sql="SELECT * FROM `students`";
                                 $res=mysqli_query($con,$sql);
-
-                                ?>
-                                <?php foreach ($res as $v) : ?>
-
-                                    <tr class=" bg-white ">
+                              if($res){
+                                   while($row=mysqli_fetch_assoc($res)) {
+                                    $id=$row['id'];
+                                    $Name=$row['Name'];
+                                    $Email=$row['Email'];
+                                    $phone=$row['phone'];
+                                    $EnrolNumber=$row['EnrolNumber'];
+                                    $DateOfAdmission=$row['DateOfAdmission'];
+                                  
+                                   echo '
+                                   
+                                       <tr class=" bg-white ">
                                         <th scope="row"> <img src="img/pu.jpg" alt="people" width="80"> </th>
-                                        <td class="align-middle"><?php echo $v['Name']; ?></td>
-                                        <td class="align-middle"><?php echo $v['Email']; ?></td>
-                                        <td class="align-middle"><?php echo $v['phone']; ?></td>
-                                        <td class="align-middle"><?php echo $v['Enrol Number']; ?></td>
-                                        <td class="align-middle"><?php echo $v['Date of admission']; ?></td>
+                                        <td class="align-middle d-none">'.$id.'</td>
+                                        <td class="align-middle">'.$Name.'</td>
+                                        <td class="align-middle">'.$Email.'</td>
+                                        <td class="align-middle">'.$phone.'</td>
+                                        <td class="align-middle">'.$EnrolNumber.'</td>
+                                        <td class="align-middle">'.$DateOfAdmission.'</td>
                                         <td class="align-middle">
-                                            <a href="#"><i class="bi bi-pencil  text-info mx-3"></i></a>
+                                            <a href="Delete.php?updateid='.$id.'"><i class="bi bi-pencil  text-info mx-3"></i></a>
                                         </td>
-                                        <td class="align-middle"> <a href="#"><i class="bi bi-trash text-info "></i></a></td>
-                                    </tr>
+                                        <td class="align-middle"> <a href="update.php?deleteid='.$id.'"><i class="bi bi-trash text-info "></i></a></td>
+                                        </tr>
                                     <tr id="spacing-row">
                                         <td></td>
                                     </tr>
-                                <?php endforeach; ?>
+                                   
+                                   ';
+                                }
+
+                                   }
+                               ?>
                             </tbody>
                         </table>
                     </div>
