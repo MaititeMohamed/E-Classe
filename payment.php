@@ -1,4 +1,9 @@
+<?php
+include 'connectDB.php';
+$sql="SELECT * FROM `payment_details`";
+$res=mysqli_query($con,$sql);
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,17 +53,13 @@
                    <td  class="text-secondary p-3" colspan="2">Date</td> 
                  
                  </tr>
-                 <?php
-                  $get = file_get_contents("paymentinfo.json");
-                  $json=json_decode($get,true);
-                ?>
-                 <?php  foreach($json as $pay) :?>
+                 <?php  foreach($res as $pay) :?>
                  <tr>
                      <td class="text-black p-3"><?php echo $pay['Name']; ?></td>
-                     <td class="text-black p-3"><?php echo $pay['Payment Schedule']; ?></td>
-                     <td class="text-black p-3"><?php echo $pay['Bill Number']; ?></td>
-                     <td class="text-black p-3"><?php echo $pay['Amount Paid'];?></td>
-                     <td class="text-black p-3"><?php echo $pay['Balance amount']; ?></td>
+                     <td class="text-black p-3"><?php echo $pay['PaymentSchedule']; ?></td>
+                     <td class="text-black p-3"><?php echo $pay['BillNumber']; ?></td>
+                     <td class="text-black p-3"><?php echo $pay['AmountPaid'];?></td>
+                     <td class="text-black p-3"><?php echo $pay['BalanceAmount']; ?></td>
                      <td class="text-black p-3"><?php echo $pay['Date'];?></td>
                      <td class="p-3"><i class="bi bi-eye text-info"></i></td>
                  </tr>
