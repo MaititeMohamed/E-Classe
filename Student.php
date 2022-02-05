@@ -11,7 +11,8 @@ if(isset($_POST['save']))
     $res=mysqli_query($con,$sql);
     if($res)
     {
-        echo 'Data iserted successfully';
+        // 
+        header('location:Student.php');
     }else{
         die(mysqli_error($con));
     }
@@ -136,18 +137,20 @@ if(isset($_POST['save']))
                                 </tr>
                             </thead>
                             <tbody class="border-top-0 ">
-                                <?php $get = file_get_contents("Studentinfo.json");
-                                $json = json_decode($get, true);
+                                <?php 
+                                $sql="SELECT * FROM `students`";
+                                $res=mysqli_query($con,$sql);
+
                                 ?>
-                                <?php foreach ($json as $v) : ?>
+                                <?php foreach ($res as $v) : ?>
 
                                     <tr class=" bg-white ">
                                         <th scope="row"> <img src="img/pu.jpg" alt="people" width="80"> </th>
                                         <td class="align-middle"><?php echo $v['Name']; ?></td>
                                         <td class="align-middle"><?php echo $v['Email']; ?></td>
-                                        <td class="align-middle"><?php echo $v['Phone']; ?></td>
-                                        <td class="align-middle"><?php echo $v['EnrollNumber']; ?></td>
-                                        <td class="align-middle"><?php echo $v['Date_addmission']; ?></td>
+                                        <td class="align-middle"><?php echo $v['phone']; ?></td>
+                                        <td class="align-middle"><?php echo $v['Enrol Number']; ?></td>
+                                        <td class="align-middle"><?php echo $v['Date of admission']; ?></td>
                                         <td class="align-middle">
                                             <a href="#"><i class="bi bi-pencil  text-info mx-3"></i></a>
                                         </td>
