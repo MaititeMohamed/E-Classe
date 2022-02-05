@@ -1,4 +1,24 @@
+<?php
+include 'connectDB.php';
+if(isset($_POST['save']))
+{
+    $Name=$_POST['Name'];
+    $Email=$_POST['Email'];
+    $phone=$_POST['phone'];
+    $EnrolNumber=$_POST['EnrolN'];
+    $sql="INSERT INTO `students`( `Name`, `Email`, `phone`, `Enrol Number`)
+    VALUES ('$Name','$Email','$phone','$EnrolNumber')";
+    $res=mysqli_query($con,$sql);
+    if($res)
+    {
+        echo 'Data iserted successfully';
+    }else{
+        die(mysqli_error($con));
+    }
+}
 
+
+?>
 
 
 
@@ -78,13 +98,13 @@
                                             <!-- phone input -->
                                             <div class="form-outline mb-4">
                                                 <label class="form-label" for="form5Example2">phone</label>
-                                                <input type="email" class="form-control" />
+                                                <input type="text" name="phone" class="form-control" />
 
                                             </div>
                                             <!-- Enrol Number input -->
                                             <div class="form-outline mb-4">
                                                 <label class="form-label" for="form5Example2">Enrol Number</label>
-                                                <input type="email" name="phone" class="form-control" />
+                                                <input type="text" name="EnrolN" class="form-control" />
 
                                             </div>
                                             <!-- Submit button -->
