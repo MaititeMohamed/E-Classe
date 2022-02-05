@@ -8,7 +8,12 @@ $row = mysqli_fetch_assoc($res);
 #number of cources
 $sqlc="SELECT COUNT(id) AS NumberOfcourses FROM courses;";
 $resc=mysqli_query($con,$sqlc);
-$rowc = mysqli_fetch_assoc($resc)
+$rowc = mysqli_fetch_assoc($resc);
+
+#total pay
+$sqlp="SELECT SUM(AmountPaid)FROM payment_details;";
+$resp=mysqli_query($con,$sqlp);
+$rowp = mysqli_fetch_assoc($resp)
 ?>
 
 <!DOCTYPE html>
@@ -69,8 +74,8 @@ $rowc = mysqli_fetch_assoc($resc)
                                 <div class="d-flex justify-content-end">
                                     <h3 class="fs-2 fw-5 "><?php 
                                    
-                                   foreach($rowc as $num){
-                                       echo $num;
+                                   foreach($rowc as $numc){
+                                       echo $numc;
                                    }
                                     ?></h3>
                                 </div>
@@ -87,7 +92,11 @@ $rowc = mysqli_fetch_assoc($resc)
                                 <div class="d-flex justify-content-end">
                                     <div class="d-flex align-items-center">
                                         <h6 class=" me-1 price">DHS</h6>
-                                        <h5 class="fs-2 fw-5 price1 ">556,000</h5>
+                                        <h5 class="fs-2 fw-5 price1 "><?php 
+                                   
+                                   foreach($rowp as $total){
+                                       echo $total;
+                                   }?></h5>
                                     </div>
                                 </div>
                             </div>
