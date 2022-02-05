@@ -13,8 +13,12 @@ $rowc = mysqli_fetch_assoc($resc);
 #total pay
 $sqlp="SELECT SUM(AmountPaid)FROM payment_details;";
 $resp=mysqli_query($con,$sqlp);
-$rowp = mysqli_fetch_assoc($resp)
+$rowp = mysqli_fetch_assoc($resp);
+$sqlu="SELECT COUNT(id) AS NumberOfuser FROM users;";
+$resu=mysqli_query($con,$sqlu);
+$rowu = mysqli_fetch_assoc($resu);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -111,7 +115,13 @@ $rowp = mysqli_fetch_assoc($resp)
                                 <i class="bi bi-person fs-1  p-3 text-white "></i>
                                 <p class="fs-5 mt-2 text-secondary">Users</p>
                                 <div class="d-flex justify-content-end">
-                                    <h3 class="fs-2 fw-5 ">3</h3>
+                                    <h3 class="fs-2 fw-5 ">
+                                    <?php 
+                                   
+                                   foreach($rowu as $users){
+                                       echo $users;
+                                   }?>
+                                    </h3>
                                 </div>
                             </div>
 
