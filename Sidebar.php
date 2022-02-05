@@ -5,8 +5,8 @@
                 <h5 class="card-title fw-bold ms-2">E-classe</h5>
             </div>
             <div class="d-flex flex-column  mt-1">
-                <img class="rounded-circle align-self-center" src="img/youcode.jpeg" alt="Youcode" width="100px">
-                <h5 class="fw-bold ms-5 mt-3">Admin name</h5>
+                <img class="rounded-circle align-self-center" src="img/med.png" alt="Youcode" width="100px">
+                <h5 class="fw-bold ms-5 mt-3">Mohamed Maitite</h5>
                 <p class="text-info ms-7 fw-bold">Admin</p>
             </div>
             <div class="list-group list-group-flush ">
