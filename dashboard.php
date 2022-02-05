@@ -1,9 +1,14 @@
 <?php
 include 'connectDB.php';
+#number of student
 $sql="SELECT COUNT(id) AS NumberOfstudent FROM students;";
 $res=mysqli_query($con,$sql);
-$row = mysqli_fetch_assoc($res)
+$row = mysqli_fetch_assoc($res);
 
+#number of cources
+$sqlc="SELECT COUNT(id) AS NumberOfcourses FROM courses;";
+$resc=mysqli_query($con,$sqlc);
+$rowc = mysqli_fetch_assoc($resc)
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +67,12 @@ $row = mysqli_fetch_assoc($res)
                                 <i class="bi bi-bookmark fs-1  p-3 " style="color: #EE95C5;"></i>
                                 <p class="fs-5 mt-2 text-secondary">Course</p>
                                 <div class="d-flex justify-content-end">
-                                    <h3 class="fs-2 fw-5 ">13</h3>
+                                    <h3 class="fs-2 fw-5 "><?php 
+                                   
+                                   foreach($rowc as $num){
+                                       echo $num;
+                                   }
+                                    ?></h3>
                                 </div>
                             </div>
 
