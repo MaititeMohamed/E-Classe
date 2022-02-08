@@ -1,5 +1,6 @@
 
---
+--Structured Query Language
+--Donald D. Chamberlin Raymond F. Boyce
 -- Structure de la table `courses`
 --
 
@@ -7,7 +8,7 @@ CREATE TABLE `courses` (
   `id` int(11) NOT NULL,
   `cours` varchar(20) COLLATE utf8_bin NOT NULL,
   `typecours` varchar(30) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ;
 
 --
 -- Déchargement des données de la table `courses`
@@ -57,7 +58,7 @@ CREATE TABLE `students` (
   `phone` varchar(15) COLLATE utf8_bin NOT NULL,
   `EnrolNumber` varchar(40) COLLATE utf8_bin NOT NULL,
   `DateOfAdmission` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) 
 
 --
 -- Déchargement des données de la table `students`
