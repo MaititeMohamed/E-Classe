@@ -2,31 +2,31 @@
 include 'connectDB.php';
 # get id from url
 
-$id=$_GET['updateid'];
+$id = $_GET['updateid'];
 # start set data in iput
 
-$sql="SELECT * FROM students WHERE id=$id ";
-$res=mysqli_query($con,$sql);
-$data=mysqli_fetch_assoc($res);
-$Name=$data['Name'];
-$Email=$data['Email'];
-$phone=$data['phone'];
-$EnrolNumber=$data['EnrolNumber'];
+$sql = "SELECT * FROM students WHERE id=$id ";
+$res = mysqli_query($con, $sql);
+$data = mysqli_fetch_assoc($res);
+$img=$data['img'];
+$Name = $data['Name'];
+$Email = $data['Email'];
+$phone = $data['phone'];
+$EnrolNumber = $data['EnrolNumber'];
 # end set data in iput
 
-if(isset($_POST['save']))
-{
-    $Name=$_POST['Name'];
-    $Email=$_POST['Email'];
-    $phone=$_POST['phone'];
-    $EnrolNumber=$_POST['EnrolN'];
-    $sql="UPDATE `students` SET id=$id,Name= '$Name',Email='$Email',phone='$phone',EnrolNumber='$EnrolNumber' where id=$id";
-    $res=mysqli_query($con,$sql);
-    if($res)
-    {
-       
+if (isset($_POST['save'])) {
+    $img=$_POST['img'];
+    $Name = $_POST['Name'];
+    $Email = $_POST['Email'];
+    $phone = $_POST['phone'];
+    $EnrolNumber = $_POST['EnrolN'];
+    $sql = "UPDATE `students` SET id=$id, img='$img',Name='$Name',Email='$Email',phone='$phone',EnrolNumber='$EnrolNumber' where id=$id";
+    $res = mysqli_query($con, $sql);
+    if ($res) {
+
         header('location:Student.php');
-    }else{
+    } else {
         die(mysqli_error($con));
     }
 }
@@ -57,17 +57,21 @@ if(isset($_POST['save']))
 
     <div class="container">
         <form method="POST">
+            <!-- img input -->
+                <div class="form-outline mb-4 mt-5">
+                <label for="formFile" class="form-label">image</label>
+                <input class="form-control" type="file" id="formFile" name="img" value="<?php echo './img/'.$img ?>"/>
+                </div>
             <!-- Name input -->
-            <div class="form-outline mb-4 mt-5">
+              <div class="form-outline mb-4 ">
                 <label class="form-label" for="form5Example1">Name</label>
                 <input type="text" name="Name" class="form-control" value="<?php echo $Name ?>" />
-
-            </div>
+               </div>
 
             <!-- Email input -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="form5Example2">Email address</label>
-                <input type="email" name="Email" class="form-control" value="<?php echo $Email ?>"/>
+                <input type="email" name="Email" class="form-control" value="<?php echo $Email ?>" />
 
             </div>
             <!-- phone input -->
