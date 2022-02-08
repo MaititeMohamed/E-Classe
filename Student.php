@@ -11,7 +11,6 @@ if(isset($_POST['save']))
     $res=mysqli_query($con,$sql);
     if($res)
     {
-        // 
         header('location:Student.php');
     }else{
         die(mysqli_error($con));
@@ -141,14 +140,14 @@ if(isset($_POST['save']))
                                 $sql="SELECT * FROM `students`";
                                 $res=mysqli_query($con,$sql);
                               if($res){
-                                   while($row=mysqli_fetch_assoc($res)) {
+                                  foreach($res as $row)
+                                  {
                                     $id=$row['id'];
                                     $Name=$row['Name'];
                                     $Email=$row['Email'];
                                     $phone=$row['phone'];
                                     $EnrolNumber=$row['EnrolNumber'];
                                     $DateOfAdmission=$row['DateOfAdmission'];
-                                  
                                    echo '
                                    
                                        <tr class=" bg-white ">
@@ -160,14 +159,14 @@ if(isset($_POST['save']))
                                         <td class="align-middle">'.$EnrolNumber.'</td>
                                         <td class="align-middle">'.$DateOfAdmission.'</td>
                                         <td class="align-middle">
-                                            <a href="update.php?updateid='.$id.'">
-                                            <i class="bi bi-pencil  text-info mx-3"></i></a>
+                                        <a href="update.php?updateid='.$id.'">
+                                        <i class="bi bi-pencil  text-info mx-3"></i></a>
                                         </td>
                                         <td class="align-middle"> <a href="delete.php?deleteid='.$id.'"><i class="bi bi-trash text-info "></i></a></td>
                                         </tr>
-                                    <tr id="spacing-row">
+                                        <tr id="spacing-row">
                                         <td></td>
-                                    </tr>
+                                        </tr>
                                    
                                    ';
                                 }

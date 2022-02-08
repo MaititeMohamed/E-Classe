@@ -3,20 +3,21 @@ include 'connectDB.php';
 #number of student
 $sql="SELECT COUNT(id) AS NumberOfstudent FROM students;";
 $res=mysqli_query($con,$sql);
-$row = mysqli_fetch_assoc($res);
+$row = mysqli_fetch_array($res);
 
 #number of cources
 $sqlc="SELECT COUNT(id) AS NumberOfcourses FROM courses;";
 $resc=mysqli_query($con,$sqlc);
-$rowc = mysqli_fetch_assoc($resc);
+$rowc =mysqli_fetch_array($resc);
 
 #total pay
 $sqlp="SELECT SUM(AmountPaid)FROM payment_details;";
 $resp=mysqli_query($con,$sqlp);
-$rowp = mysqli_fetch_assoc($resp);
+$rowp = mysqli_fetch_array($resp);
+#number of user
 $sqlu="SELECT COUNT(id) AS NumberOfuser FROM users;";
 $resu=mysqli_query($con,$sqlu);
-$rowu = mysqli_fetch_assoc($resu);
+$rowu = mysqli_fetch_array($resu);
 ?>
 
 
@@ -61,9 +62,8 @@ $rowu = mysqli_fetch_assoc($resu);
                                 <div class="d-flex justify-content-end">
                                     <h3 class="fs-2 fw-5 "><?php 
                                    
-                                    foreach($row as $num){
-                                        echo $num;
-                                    }
+                                   echo $row[0];
+
                                      ?></h3>
                                 </div>
                             </div>
@@ -76,12 +76,14 @@ $rowu = mysqli_fetch_assoc($resu);
                                 <i class="bi bi-bookmark fs-1  p-3 " style="color: #EE95C5;"></i>
                                 <p class="fs-5 mt-2 text-secondary">Course</p>
                                 <div class="d-flex justify-content-end">
-                                    <h3 class="fs-2 fw-5 "><?php 
+                                    <h3 class="fs-2 fw-5 ">
+                                <?php 
                                    
-                                   foreach($rowc as $numc){
-                                       echo $numc;
-                                   }
-                                    ?></h3>
+                                
+                                echo $rowc[0];
+                                   
+                                    ?>
+                                    </h3>
                                 </div>
                             </div>
 
@@ -98,9 +100,9 @@ $rowu = mysqli_fetch_assoc($resu);
                                         <h6 class=" me-1 price">DHS</h6>
                                         <h5 class="fs-2 fw-5 price1 "><?php 
                                    
-                                   foreach($rowp as $total){
-                                       echo $total;
-                                   }?></h5>
+                                   echo $rowp[0];
+
+                                   ?></h5>
                                     </div>
                                 </div>
                             </div>
@@ -117,10 +119,9 @@ $rowu = mysqli_fetch_assoc($resu);
                                 <div class="d-flex justify-content-end">
                                     <h3 class="fs-2 fw-5 ">
                                     <?php 
-                                   
-                                   foreach($rowu as $users){
-                                       echo $users;
-                                   }?>
+                                     echo $rowu[0];
+
+                                  ?>
                                     </h3>
                                 </div>
                             </div>

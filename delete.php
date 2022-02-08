@@ -3,7 +3,7 @@ include 'connectDB.php';
 if(isset($_GET['deleteid']))
 {
     $id=$_GET['deleteid'];
-    $sql="DELETE FROM students WHERE id=$id";
+    $sql="DELETE FROM `students` WHERE id=$id";
     $res=mysqli_query($con,$sql);
     if($res)
     {
@@ -12,7 +12,6 @@ if(isset($_GET['deleteid']))
 
     }else{
         die(mysqli_error($con));
-
     }
 
 }
