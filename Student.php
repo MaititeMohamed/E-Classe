@@ -2,12 +2,13 @@
 include 'connectDB.php';
 if(isset($_POST['save']))
 {
+    $img=$_POST['img'];
     $Name=$_POST['Name'];
     $Email=$_POST['Email'];
     $phone=$_POST['phone'];
     $EnrolNumber=$_POST['EnrolN'];
-    $sql="INSERT INTO `students`( `Name`, `Email`, `phone`, `EnrolNumber`)
-    VALUES ('$Name','$Email','$phone','$EnrolNumber')";
+    $sql="INSERT INTO `students`(`img`,`Name`, `Email`, `phone`, `EnrolNumber`)
+    VALUES ('$img','$Name','$Email','$phone','$EnrolNumber')";
     $res=mysqli_query($con,$sql);
     if($res)
     {
@@ -82,6 +83,13 @@ if(isset($_POST['save']))
                                     </div>
                                     <div class="container">
                                         <form method="POST">
+
+                                        <!-- image input -->
+                                        <div class="form-outline mb-4">
+                                            
+                                                <label for="formFile" class="form-label"> image</label>
+                                                <input class="form-control" type="file" id="formFile" name="img">
+                                            </div>
                                             <!-- Name input -->
                                             <div class="form-outline mb-4">
                                                 <label class="form-label" for="form5Example1">Name</label>
@@ -143,6 +151,7 @@ if(isset($_POST['save']))
                                   foreach($res as $row)
                                   {
                                     $id=$row['id'];
+                                    $img=$row['img'];
                                     $Name=$row['Name'];
                                     $Email=$row['Email'];
                                     $phone=$row['phone'];
@@ -150,15 +159,14 @@ if(isset($_POST['save']))
                                     $DateOfAdmission=$row['DateOfAdmission'];
                                    echo '
                                    
-                                       <tr class=" bg-white ">
-                                        <th scope="row"> <img src="img/pu.jpg" alt="people" width="80"> </th>
-                                        <td class="align-middle d-none">'.$id.'</td>
-                                        <td class="align-middle">'.$Name.'</td>
-                                        <td class="align-middle">'.$Email.'</td>
-                                        <td class="align-middle">'.$phone.'</td>
-                                        <td class="align-middle">'.$EnrolNumber.'</td>
-                                        <td class="align-middle">'.$DateOfAdmission.'</td>
-                                        <td class="align-middle">
+                                       <tr class=" bg-white align-middle">
+                                        <th scope="row"> <img src="img/'.$img.'" alt="userAvatar" width="80"> </th>
+                                        <td >'.$Name.'</td>
+                                        <td >'.$Email.'</td>
+                                        <td >'.$phone.'</td>
+                                        <td >'.$EnrolNumber.'</td>
+                                        <td >'.$DateOfAdmission.'</td>
+                                        <td >
                                         <a href="update.php?updateid='.$id.'">
                                         <i class="bi bi-pencil  text-info mx-3"></i></a>
                                         </td>
