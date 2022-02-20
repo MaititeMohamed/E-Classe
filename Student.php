@@ -1,5 +1,6 @@
 <?php
 include 'connectDB.php';
+include 'session.php';
 if(isset($_POST['save']))
 {
     $img=$_POST['img'];
