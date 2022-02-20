@@ -1,5 +1,6 @@
 <?php
 include 'connectDB.php';
+include 'session.php';
 $sql="SELECT * FROM `payment_details`";
 $res=mysqli_query($con,$sql);
 
