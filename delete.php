@@ -1,5 +1,6 @@
 <?php
 include 'connectDB.php';
+include 'session.php';
 if(isset($_GET['deleteid']))
 {
     $id=$_GET['deleteid'];
