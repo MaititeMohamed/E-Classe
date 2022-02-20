@@ -1,4 +1,6 @@
-
+<?php 
+include 'session.php';
+?>
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-1  px-4">
 <div class="d-flex align-items-center">
 <a class="text-black" href="#"> <i class="bi bi-arrow-left-circle fs-3 ms-4"id="menu-toggle"></i></a>
