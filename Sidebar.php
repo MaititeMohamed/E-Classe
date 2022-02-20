@@ -1,4 +1,6 @@
-
+<?php 
+include 'session.php';
+?>
 <!--     start  Sidebar       -->
         <div id="sidebar-wrapper" style="background: #FAFFC1;">
             <div class=" border-start border-5 ms-4 mt-3" style="border-color: #00C1FE !important;">
@@ -6,7 +8,7 @@
             </div>
             <div class="d-flex flex-column  mt-1">
                 <img class="rounded-circle align-self-center" src="img/med.png" alt="Youcode" width="100px">
-                <h5 class="fw-bold ms-5 mt-3">Mohamed Maitite</h5>
+                <h5 class="small ms-5 mt-3"><?php echo  $_SESSION['FirstNam'];?></h5>
                 <p class="text-info ms-7 fw-bold">Admin</p>
             </div>
             <div class="list-group list-group-flush ">
@@ -28,7 +30,7 @@
                 <a href="#"
                     class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto  aside-bar-links ">
                     <i class="bi bi-sliders"></i> Settings</a>
-                    <a href="#" class="list-group-item list-group-item-action bg-transparent pt-0 ms-4  second-text ">
+                    <a href="logout.php" class="list-group-item list-group-item-action bg-transparent pt-0 ms-4  second-text ">
                     Logout <i class="bi bi-box-arrow-in-right"></i></a>
             </div>
         </div>
