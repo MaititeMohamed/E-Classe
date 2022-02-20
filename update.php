@@ -1,5 +1,6 @@
 <?php
 include 'connectDB.php';
+include 'session.php';
 # get id from url
 
 $id = $_GET['updateid'];
