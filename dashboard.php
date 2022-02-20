@@ -1,5 +1,6 @@
 <?php
 include 'connectDB.php';
+include 'session.php';
 #number of student
 $sql="SELECT COUNT(id) AS NumberOfstudent FROM students;";
 $res=mysqli_query($con,$sql);
@@ -18,6 +19,7 @@ $rowp = mysqli_fetch_array($resp);
 $sqlu="SELECT COUNT(id) AS NumberOfuser FROM users;";
 $resu=mysqli_query($con,$sqlu);
 $rowu = mysqli_fetch_array($resu);
+
 ?>
 
 
@@ -44,6 +46,7 @@ $rowu = mysqli_fetch_array($resu);
 
     <?php
       include 'Sidebar.php'
+
      ?>
         <!-- start  Content -->
         <div id="page-content-wrapper" style="background: #ffffff;">
