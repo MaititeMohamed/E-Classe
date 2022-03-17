@@ -13,16 +13,18 @@ $img=$data['img'];
 $Name = $data['Name'];
 $Email = $data['Email'];
 $phone = $data['phone'];
+$pro=$data['pro'];
 $EnrolNumber = $data['EnrolNumber'];
 # end set data in iput
 
-if (isset($_POST['save'])) {
+if(isset($_POST['save'])){
     $img=$_POST['img'];
     $Name = $_POST['Name'];
     $Email = $_POST['Email'];
     $phone = $_POST['phone'];
+    $pro=$_POST['pro'];
     $EnrolNumber = $_POST['EnrolN'];
-    $sql = "UPDATE `students` SET id=$id, img='$img',Name='$Name',Email='$Email',phone='$phone',EnrolNumber='$EnrolNumber' where id=$id";
+    $sql = "UPDATE `students` SET id=$id, img='$img',Name='$Name',Email='$Email',phone='$phone',EnrolNumber='$EnrolNumber',pro='$pro' where id=$id";
     $res = mysqli_query($con, $sql);
     if ($res) {
 
@@ -85,6 +87,12 @@ if (isset($_POST['save'])) {
             <div class="form-outline mb-4">
                 <label class="form-label" for="form5Example2">Enrol Number</label>
                 <input type="text" name="EnrolN" class="form-control" value="<?php echo $EnrolNumber ?>" />
+
+            </div>
+             <!-- Enrol Number input -->
+             <div class="form-outline mb-4">
+                <label class="form-label" for="form5Example2">pro</label>
+                <input type="text" name="pro" class="form-control" value="<?php echo $pro ?>" />
 
             </div>
             <!-- Submit button -->

@@ -8,8 +8,9 @@ if(isset($_POST['save']))
     $Email=$_POST['Email'];
     $phone=$_POST['phone'];
     $EnrolNumber=$_POST['EnrolN'];
-    $sql="INSERT INTO `students`(`img`,`Name`, `Email`, `phone`, `EnrolNumber`)
-    VALUES ('$img','$Name','$Email','$phone','$EnrolNumber')";
+    $pro=$_POST['pro'];
+    $sql="INSERT INTO `students`(`img`,`Name`, `Email`, `phone`,`EnrolNumber`,`pro`)
+    VALUES ('$img','$Name','$Email','$phone','$EnrolNumber','$pro')";
     $res=mysqli_query($con,$sql);
     if($res)
     {
@@ -17,6 +18,8 @@ if(isset($_POST['save']))
     }else{
         die(mysqli_error($con));
     }
+    
+      
 }
 
 
@@ -116,6 +119,11 @@ if(isset($_POST['save']))
                                                 <input type="text" name="EnrolN" class="form-control" />
 
                                             </div>
+                                              <!-- Enrol Number input -->
+                                              <div class="form-outline mb-4">
+                                                <label class="form-label" for="form5Example2">pro</label>
+                                                <input type="text" name="pro" class="form-control" />
+                                            </div>
                                             <!-- Submit button -->
                                             <div class=" d-flex  justify-content-center">
                                                 <button type="submit" name="save" class="btn btn-info btn-block mb-4">save</button>
@@ -140,6 +148,7 @@ if(isset($_POST['save']))
                                     <th scope="col">Email</th>
                                     <th scope="col">phone</th>
                                     <th scope="col">Enrol Number</th>
+                                    <th scope="col">pro</th>
                                     <th scope="col">Date of admission</th>
                                     <th scope="col"></th>
                                 </tr>
@@ -157,6 +166,7 @@ if(isset($_POST['save']))
                                     $Email=$row['Email'];
                                     $phone=$row['phone'];
                                     $EnrolNumber=$row['EnrolNumber'];
+                                    $pro=$row['pro'];
                                     $DateOfAdmission=$row['DateOfAdmission'];
                                    echo '
                                    
@@ -166,6 +176,7 @@ if(isset($_POST['save']))
                                         <td >'.$Email.'</td>
                                         <td >'.$phone.'</td>
                                         <td >'.$EnrolNumber.'</td>
+                                        <td >'.$pro.'</td>
                                         <td >'.$DateOfAdmission.'</td>
                                         <td >
                                         <a href="update.php?updateid='.$id.'">

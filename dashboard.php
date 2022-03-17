@@ -19,7 +19,6 @@ $rowp = mysqli_fetch_array($resp);
 $sqlu="SELECT COUNT(id) AS NumberOfuser FROM users;";
 $resu=mysqli_query($con,$sqlu);
 $rowu = mysqli_fetch_array($resu);
-
 ?>
 
 
