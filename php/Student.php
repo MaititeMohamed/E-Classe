@@ -9,6 +9,10 @@ if(isset($_POST['save']))
     $phone=$_POST['phone'];
     $EnrolNumber=$_POST['EnrolN'];
     $pro=$_POST['pro'];
+    
+    if (empty($img) && empty($Name) && empty($Email) && empty($phone) && empty($EnrolNumber ) && empty($pro)) {
+        echo "<script>alert('fill all input')</script>";
+      }else{
     $sql="INSERT INTO `students`(`img`,`Name`, `Email`, `phone`,`EnrolNumber`,`pro`)
     VALUES ('$img','$Name','$Email','$phone','$EnrolNumber','$pro')";
     $res=mysqli_query($con,$sql);
@@ -17,7 +21,7 @@ if(isset($_POST['save']))
         header('location:Student.php');
     }else{
         die(mysqli_error($con));
-    }
+    }}
     
       
 }
@@ -36,8 +40,8 @@ if(isset($_POST['save']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="page Student for see Students List and more informaition about student  ">
     <meta name="keywords" content="Student Students List ">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <title>Student</title>
     <style>
@@ -84,49 +88,50 @@ if(isset($_POST['save']))
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">ADD NEW STUDENT</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                       
                                     </div>
                                     <div class="container">
                                         <form method="POST">
 
                                         <!-- image input -->
-                                        <div class="form-outline mb-4">
+                                        <div class="form-outline mb-1">
                                             
                                                 <label for="formFile" class="form-label"> image</label>
                                                 <input class="form-control" type="file" id="formFile" name="img">
                                             </div>
                                             <!-- Name input -->
-                                            <div class="form-outline mb-4">
+                                            <div class="form-outline mb-1">
                                                 <label class="form-label" for="form5Example1">Name</label>
                                                 <input type="text" name="Name" class="form-control" />
 
                                             </div>
 
                                             <!-- Email input -->
-                                            <div class="form-outline mb-4">
+                                            <div class="form-outline mb-1">
                                                 <label class="form-label" for="form5Example2">Email address</label>
                                                 <input type="email" name="Email" class="form-control" />
 
                                             </div>
                                             <!-- phone input -->
-                                            <div class="form-outline mb-4">
+                                            <div class="form-outline mb-1">
                                                 <label class="form-label" for="form5Example2">phone</label>
                                                 <input type="text" name="phone" class="form-control" />
 
                                             </div>
                                             <!-- Enrol Number input -->
-                                            <div class="form-outline mb-4">
+                                            <div class="form-outline mb-1">
                                                 <label class="form-label" for="form5Example2">Enrol Number</label>
                                                 <input type="text" name="EnrolN" class="form-control" />
 
                                             </div>
                                               <!-- Enrol Number input -->
-                                              <div class="form-outline mb-4">
+                                              <div class="form-outline mb-1">
                                                 <label class="form-label" for="form5Example2">pro</label>
                                                 <input type="text" name="pro" class="form-control" />
                                             </div>
                                             <!-- Submit button -->
                                             <div class=" d-flex  justify-content-center">
-                                                <button type="submit" name="save" class="btn btn-info btn-block mb-4">save</button>
+                                                <button type="submit" name="save" class="btn btn-info btn-block mb-1">save</button>
 
                                             </div>
                                         </form>
@@ -170,8 +175,8 @@ if(isset($_POST['save']))
                                     $DateOfAdmission=$row['DateOfAdmission'];
                                    echo '
                                    
-                                       <tr class=" bg-white align-middle">
-                                        <th scope="row"> <img src="img/'.$img.'" alt="userAvatar" width="80"> </th>
+                                        <tr class=" bg-white align-middle">
+                                        <th scope="row"> <img src="../img/'.$img.'" alt="userAvatar" width="80"> </th>
                                         <td >'.$Name.'</td>
                                         <td >'.$Email.'</td>
                                         <td >'.$phone.'</td>
@@ -203,9 +208,9 @@ if(isset($_POST['save']))
 
 
         </div>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/script.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/script.js"></script>
 </body>
 
 </html>

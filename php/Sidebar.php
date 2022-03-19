@@ -7,7 +7,7 @@ include 'session.php';
                 <h5 class="card-title fw-bold ms-2">E-classe</h5>
             </div>
             <div class="d-flex flex-column  mt-1">
-                <img class="rounded-circle align-self-center" src="img/med.png" alt="Youcode" width="100px">
+                <img class="rounded-circle align-self-center" src="../img/med.png" alt="Youcode" width="100px">
                 <h5 class="small ms-5 mt-3"><?php echo  $_SESSION['FirstNam'];?></h5>
                 <p class="text-info ms-7 fw-bold">Admin</p>
             </div>
@@ -15,7 +15,7 @@ include 'session.php';
             <a href="dashboard.php"
                     class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto pb-0 aside-bar-links ">
                     <i class="bi bi-house"></i> Home</a>
-                <a href="#"
+                <a href="Course.php"
                     class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto pb-0 aside-bar-links ">
                     <i class="bi bi-bookmark"></i> Course</a>
                 <a href="Student.php"

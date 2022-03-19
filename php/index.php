@@ -80,8 +80,8 @@ include 'head.php';
     </div>
 
 
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
 </body>
 
 </html>

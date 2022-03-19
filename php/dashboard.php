@@ -31,8 +31,8 @@ $rowu = mysqli_fetch_array($resu);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="page dashboard for see number of Users and Students course  ">
     <meta name="keywords" content="dashboard E-classe learn course">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     
     <title>dashboard</title>
@@ -146,9 +146,9 @@ $rowu = mysqli_fetch_array($resu);
 
     </div>
    
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
