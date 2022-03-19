@@ -24,7 +24,7 @@ include 'session.php';
                 <a href="payment.php"
                     class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto pb-0 aside-bar-links ">
                     <i class="bi bi-wallet"></i> Payment</a>
-                <a href="#"
+                <a href="Report.php"
                     class="list-group-item list-group-item-action  bg-transparent w-75 second-text m-auto pb-0 aside-bar-links ">
                     <i class="bi bi-file-earmark"></i> Report</a>
                 <a href="#"
